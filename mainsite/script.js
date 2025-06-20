@@ -118,7 +118,7 @@ async function searchBuses() {
     if (!destination) return;
 
     try {
-        const response = await fetch('https://busseva-backend.onrender.com/api/buses');
+        const response = await fetch('https://busseva-backend-yhzz.onrender.com/api/buses');
         if (!response.ok) {
             throw new Error('Failed to fetch bus data');
         }
@@ -199,7 +199,7 @@ function displayResults(buses, searchTerm) {
 // View bus details
 async function viewBusDetails(busId) {
     try {
-        const response = await fetch(`https://busseva-backend.onrender.com/api/buses/${busId}`);
+        const response = await fetch(`https://busseva-backend-yhzz.onrender.com/api/buses/${busId}`);
         if (!response.ok) {
             throw new Error('Failed to load bus details');
         }
