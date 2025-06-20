@@ -216,7 +216,7 @@ async function shareRoute(busId, event) {
     }
     
     try {
-        const response = await fetch(`https://busseva-backend.onrender.com/api/buses/${busId}`);
+        const response = await fetch(`https://busseva-backend-yhzz.onrender.com/api/buses/${busId}`);
         if (!response.ok) {
             throw new Error('Failed to load bus details');
         }
@@ -291,7 +291,7 @@ function showToast(message, type = 'success') {
 // Show bus details
 async function showBusDetails(busId) {
     try {
-        const response = await fetch(`https://busseva-backend.onrender.com/api/buses/${busId}`);
+        const response = await fetch(`https://busseva-backend-yhzz.onrender.com/api/buses/${busId}`);
         if (!response.ok) {
             throw new Error('Failed to load bus details');
         }
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Show loading state
         busGrid.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>';
         
-        const response = await fetch('https://busseva-backend.onrender.com/api/buses');
+        const response = await fetch('https://busseva-backend-yhzz.onrender.com/api/buses');
         if (!response.ok) {
             throw new Error('Failed to fetch bus data');
         }
